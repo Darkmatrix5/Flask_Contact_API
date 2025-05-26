@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Identify Contact</title>
+</head>
+<body>
+  <h2>Identify Contact</h2>
+  <form id="identifyForm">
+    Email: <input type="email" id="email" name="email"><br><br>
+    Phone: <input type="text" id="phoneNumber" name="phoneNumber"><br><br>
+    <button type="submit">Send</button>
+  </form>
+  <pre id="response"></pre>
+
+  <script>
+    document.getElementById('identifyForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const phoneNumber = document.getElementById('phoneNumber').value;
+
+      const response = await fetch('/identify', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({email, phoneNumber})
+      });
+
+      const data = await response.json();
+      document.getElementById('response').textContent = JSON.stringify(data, null, 2);
+    });
+  </script>
+</body>
+</html>
