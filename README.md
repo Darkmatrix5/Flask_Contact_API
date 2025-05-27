@@ -18,8 +18,7 @@ This is a simple Flask web application that manages contacts by linking related 
 
 ### API Endpoint & Usage
 POST /identify
-Base URL:
-👉 https://flask-contact-api-1.onrender.com/identify
+Base URL: https://flask-contact-api-1.onrender.com/identify
 
 Example:
 {
