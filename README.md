@@ -11,24 +11,15 @@ This is a simple Flask web application that manages contacts by linking related 
 - REST API endpoint `/identify` for contact identification (accepts JSON).
 - Simple HTML form to test contact submission via web browser.
 
-## Getting Started
-
 ### Prerequisites
 
 - Python 3.8 or higher
 - Flask and dependencies (listed in requirements.txt)
 
-### Installation
-
-1. Clone the repository or download the code files.
-2. (Optional) Create and activate a Python virtual environment.
-3. Install dependencies with `pip install -r requirements.txt`.
-4. Run the app with `python app.py`.
-5. Open a browser at `http://127.0.0.1:5000` to access the form.
-
-### API Usage
-
-Send a POST request to `/identify` with JSON data containing email and/or phoneNumber fields:
+### API Endpoint & Usage
+POST /identify
+Base URL:
+👉 https://flask-contact-api-1.onrender.com/identify
 
 Example:
 {
